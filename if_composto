@@ -1,0 +1,45 @@
+//== exemplo if composto
+
+#include <stdio.h>
+float media;
+main(){
+	printf("Digite a media:\n");
+	scanf("%f", &media);
+	if(media >= 5){
+		if(media >= 7){
+			printf("Aluno aprovado");			
+		}else{
+			printf("Aluno de Exame final");
+		}		
+	}else{
+		printf("Aluno reprovado;");
+	}
+}
+
+//Exe1 - Ler o nome de 2 times e o numero de gols marcados na partida. Escrever o nome do time vencedor. Caso nao haja vencedor, devera 
+//ser impresso a palavra empate.
+#include <stdio.h>
+char time1[50], time2[50];
+int gol1, gol2;
+main(){
+ printf("Digite o nome do primeiro time:/n");
+ scanf("%c", &time1);
+ printf("Digite o nome do segundo time:/n");
+ scanf("%c", &time2);
+
+ printf("Digite o numero de gols do primeiro time:%c, time1);
+ scanf("%i", gol1);
+ printf("Digite o numero de gols do primeiro time:%c, time2);
+ scanf("%i", gol2);
+
+if (gols1 > gols2) {
+        printf("Time vencedor: %s\n", time1);
+    }
+    else if (gols2 > gols1) {
+        printf("Time vencedor: %s\n", time2);
+    }
+    else {
+        printf("Empate\n");
+}
+
+}
