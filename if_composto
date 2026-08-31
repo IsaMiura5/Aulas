@@ -3,17 +3,17 @@
 #include <stdio.h>
 float media;
 main(){
-	printf("Digite a media:\n");
-	scanf("%f", &media);
-	if(media >= 5){
-		if(media >= 7){
-			printf("Aluno aprovado");			
-		}else{
-			printf("Aluno de Exame final");
-		}		
-	}else{
-		printf("Aluno reprovado;");
+printf("Digite a media:\n");
+scanf("%f", &media);
+if(media >= 5){
+if(media >= 7){
+	printf("Aluno aprovado");			
+}else{
+	printf("Aluno de Exame final");		
+}else{
+	printf("Aluno reprovado;");
 	}
+return 0;
 }
 
 //Exe1 - Ler o nome de 2 times e o numero de gols marcados na partida. Escrever o nome do time vencedor. Caso nao haja vencedor, devera 
@@ -33,13 +33,45 @@ main(){
  scanf("%i", gol2);
 
 if (gols1 > gols2) {
-        printf("Time vencedor: %s\n", time1);
-    }
-    else if (gols2 > gols1) {
-        printf("Time vencedor: %s\n", time2);
-    }
-    else {
-        printf("Empate\n");
+    printf("Time vencedor: %s\n", time1);
+}else if (gols2 > gols1) {
+    printf("Time vencedor: %s\n", time2);
+}else {
+    printf("Empate\n");
+}
+return 0;
 }
 
+
+//exe2
+#include <stdio.h> 
+int main() { 
+float temperatura; 
+ printf("Digite a temperatura do termometro: "); 
+ scanf("%f", &temperatura); 
+if (temperatura < 100) { 
+ printf("A temperatura esta muito baixa.\n");
+} else if (temperatura >= 100 && temperatura <= 200) { 
+ printf("A temperatura esta baixa.\n");
+} else if (temperatura > 200 && temperatura < 500) {
+ printf("A temperatura esta normal.\n");
+} else { printf("A temperatura esta muito alta.\n");
+} 
+return 0; }
 }
+
+
+//exe3
+#include <stdio.h>
+float nota1[10], nota2[10], nota3[10], nota4[10];
+ printf("Digite o primeiro valor:/n");
+ scanf("%f", &valor1);
+  printf("Digite o segundo valor:/n");
+ scanf("%f", &valor2);
+ printf("Digite o terceiro valor:/n");
+ scanf("%f", &valor3);
+ printf("Digite o quarto valor:/n");
+ scanf("%f", &valor4);
+
+
+
