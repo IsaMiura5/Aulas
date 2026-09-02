@@ -1,5 +1,40 @@
+//== exe 02
+#include <stdio.h>
+main(){
+int numero;
+printf("Digite um numero:/n");
+scanf("%i",&numero);
+if(numero < 0){
+  printf("\nNumero lido: %i", numero*(-1));
+}else{
+  printf("\nNumero lido: %i", numero);
+}
+}
 
+//== exe 03
+#include <stdio.h>
+main(){
+int numero;
+numero = 10;
+if((numero%2) == 0){
+  printf("\nNumero par");
+}else{
+  printf("\nNumero impar");
+}
+}
 
+// == exe 04
+#includeed <stdio.h>
+int numero;
+main(){
+printf("Digite um numero:/n");
+scanf(%i, &numero);
+if(numero < 0){
+  prinf("\nNumero lido: %i", numero);
+}else{
+  print("\nNumero lido: %i", numero);
+}
+}
 
 //== exe 05
 #include <stdio.h>
