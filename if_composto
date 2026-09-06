@@ -23,7 +23,7 @@ char time1[50], time2[50];
 int gols1, gols2;
 main(){
 	printf("\nDigite o nome do time1:\n");
-	fflush(stdin);   // limpar o buffer do teclado (stdin)
+	fflush(stdin);   // fflush(stdin) is an instruction intended to clear or "flush" the input buffer associated with standard input (stdin).
 	fgets(time1, 50, stdin);
 	printf("\nDigite a quantidade de gols do time 1:\n");
 	scanf("%i", &gols1);	
