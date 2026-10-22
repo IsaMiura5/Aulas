@@ -1,0 +1,104 @@
+//exe1) Apresentar todos os valores numericos impares situados na faixa de 0 a 30.
+
+#include <stdio.h>
+main(){
+	int x = 0;
+	while (x <= 30){
+		if( (x%2) != 0){
+			printf("\nValor impar: %d", x);			
+		}
+		x++;
+	}
+}
+
+//exe2)Escreva um programa para ler as notas de 1a e 2a avaliacoes de um aluno, calcule e imprima a media semestral. So devem
+ser aceitos valores validos durante a leitura (0 a 10) para cada nota. Se uma nota fora deste intervalo for digitada, pedir ao usiuario 
+para informar a nota novamente.
+
+#include <stdio.h>
+float media,n1,n2;
+main(){
+	printf("Digite a nota da primeira avaliação(0 a 10):\n");
+	scanf("%f", &n1);
+	while( (n1<0) || (n1>10) )   {
+		printf("Digite um valor valido de 0 a 10:\n");
+		scanf("%f", &n1);
+	}
+	
+	printf("Digite a nota da segunda avaliação(0 a 10):\n");
+	scanf("%f", &n2);
+	while( (n2<0) || (n2>10) )   {
+		printf("Digite um valor valido de 0 a 10:\n");
+		scanf("%f", &n2);
+	}
+	media = (n1+n2) / 2;
+	printf("\nMedia: %.2f", media);	
+}
+
+//exe3)Escreva um programa c que aprese4nte o menu de opcoes abaixo.
+1 - saudacao
+2 - bronca
+3 - felicitacao
+4 - fim de servico
+
+#include <stdio.h>
+
+int main() {
+    int op;
+
+    do {
+        printf("\nMENU DE OPCOES\n");
+        printf("1 - Saudacao\n");
+        printf("2 - Bronca\n");
+        printf("3 - Felicitacao\n");
+        printf("4 - Fim de servico\n");
+
+        printf("Escolha uma opcao: ");
+        scanf("%d", &op);
+
+        switch (op) {
+            case 1:
+                printf("Ola, Como vai?\n");
+                break;
+
+            case 2:
+                printf("Tente melhorar na proxima!\n");
+                break;
+
+            case 3:
+                printf("Bom trabalho!!\n");
+                break;
+
+            case 4:
+                printf("Fim de servico!\n");
+                break;
+
+            default:
+                printf("Opcao invalida!\n");
+        }
+
+    } while (op != 4);
+
+    return 0;
+}
+
+//exe4)Faca um algoritmo que determine o maior entre N numeros. A condicao de parada e a entrada de um valor 0, ou seja, o usuario
+deve ficar digitando um numero ate que a entrada seja igual a zero. Depois disso, o programa mostrara o maior numero digitado pelo 
+usuario.
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
