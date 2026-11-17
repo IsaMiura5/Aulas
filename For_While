@@ -1,0 +1,98 @@
+//FOR: quando precisar ler exatamente 5 números, 10 notas ou percorrer uma sequência.
+//WHILE: quando precisar repetir até o usuário digitar um número específico, por exemplo, até digitar zero.
+
+(i = 1; i <= 5; i++)
+int i = 1 --- E a inicializacao, ou seja, estamos criando um contador que começa em 1.
+i <= 5 --- Significa que o programa continuará repetindo enquanto i for menor ou igual a 5.
+i ++ ---Significa aumentar o valor de i em 1.(i = i + 1)
+
+
+// 1)escreva um programa em c que leia um conjunto de 5 numeros inteiros positivos
+e determine a quantidade de numeros pares e numeros impares contidos no mesmo.
+
+#include <stdio.h>
+int main() {
+    int numero, pares = 0, impares = 0;
+
+    for (int i = 1; i <= 5; i++) {
+        printf("Digite o %dº numero inteiro positivo: ", i);
+        scanf("%d", &numero);
+
+        if (numero % 2 == 0) {
+            pares++;
+        } else {
+            impares++;
+        }
+    }
+
+    printf("\nQuantidade de numeros pares: %d\n", pares);
+    printf("Quantidade de numeros impares: %d\n", impares);
+
+    return 0;
+}
+
+// 2)Faca um programa que colete a altura de 6 pessoas e depois informe a maior e a menor altura encontrada. 
+#include <stdio.h>
+int main() {
+    float altura, maior, menor;
+
+    for (int i = 1; i <= 6; i++) {
+        printf("Digite a altura da %d pessoa: ", i);
+        scanf("%f", &altura);
+
+        if (i == 1) {
+            maior = altura;
+            menor = altura;
+        } else {
+            if (altura > maior) {
+                maior = altura;
+            }
+
+            if (altura < menor) {
+                menor = altura;
+            }
+        }
+    }
+
+    printf("\nMaior altura: %.2f metros\n", maior);
+    printf("Menor altura: %.2f metros\n", menor);
+
+    return 0;
+}
+
+// 3) Faca um programa que mostre a tabuada de um numero menor do que 10. O usuario ira informar um numero 
+//    menor que 10 e o programa ira imprimir a tabuada deste numero.
+#include <stdio.h>
+int main() {
+    int numero;
+
+    printf("Digite um numero menor que 10: ");
+    scanf("%d", &numero);
+
+    if (numero < 10) {   // verificamos se o número é menor que 10
+        for (int i = 1; i <= 10; i++) {
+            printf("%d x %d = %d\n", numero, i, numero * i);
+        }
+    } else {
+        printf("Numero invalido! Digite um numero menor que 10.\n");
+    }
+
+    return 0;
+}
+
+// 4) Elaborar um programa que apresente no final o somatorio dos numeros impares existentes da faixa 
+//    de 10 ate 20. 
+#include <stdio.h>
+int main() {
+    int soma = 0;
+
+    for (int i = 10; i <= 20; i++) {
+        if (i % 2 != 0) {
+            soma = soma + i;
+        }
+    }
+
+    printf("O somatorio dos numeros impares e: %d\n", soma);
+
+    return 0;
+}
