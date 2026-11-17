@@ -96,3 +96,377 @@ int main() {
 
     return 0;
 }
+
+----------------------------------------------
+// 1) Escreva um programa que leia 10 numeros inteiros e conte quantos deles sao multiplos
+de 3. 
+#include <stdio.h>
+int main() {
+    int numero, contador = 0;
+
+    for (int i = 1; i <= 10; i++) {
+        printf("Digite o %d numero: ", i);
+        scanf("%d", &numero);
+
+        if (numero % 3 == 0) {
+            contador++;
+        }
+    }
+
+    printf("\nQuantidade de multiplos de 3: %d\n", contador);
+
+    return 0;
+}
+
+// 2) Faca um programa que leia a idade de 5 pessoas e calcule a media aritmetica dessas 
+      idades.
+#include <stdio.h>
+int main() {
+    int idade, soma = 0;
+    float media;
+
+    for (int i = 1; i <= 5; i++) {
+        printf("Digite a idade da %d pessoa: ", i);
+        scanf("%d", &idade);
+
+        soma = soma + idade;
+    }
+
+    media = soma / 5.0;
+
+    printf("\nA media das idades e: %.2f\n", media);
+
+    return 0;
+}
+
+// 3) Crie um programa que peca um numero inteiro positivo ao usuario e calcule o seu
+      fatorial.
+#include <stdio.h>
+int main() {
+    int numero;
+    int fatorial = 1;
+
+    printf("Digite um numero inteiro positivo: ");
+    scanf("%d", &numero);
+
+    if (numero >= 0) {
+        for (int i = 1; i <= numero; i++) {
+            fatorial = fatorial * i;
+        }
+
+        printf("O fatorial de %d e: %d\n", numero, fatorial);
+    } else {
+        printf("Numero invalido! Digite um numero positivo.\n");
+    }
+
+    return 0;
+}
+
+// 4)Elaborar um programa que calcule e apresente o somatorio de todos os numeros pares
+     na faixa de 1 ate 50.
+#include <stdio.h>
+int main() {
+    int soma = 0;
+
+    for (int i = 1; i <= 50; i++) {
+        if (i % 2 == 0) {
+            soma = soma + i;
+        }
+    }
+
+    printf("O somatorio dos numeros pares e: %d\n", soma);
+
+    return 0;
+}
+
+// 5)Faca um programa que peca dois numeros inteiros uma base e um expoente. Calcule a potencia
+(base elevada ao expoente) utilizando um laco for, sem usar a funcao pow().
+#include <stdio.h>
+int main() {
+    int base, expoente;
+    int resultado = 1;
+
+    printf("Digite a base: ");
+    scanf("%d", &base);
+
+    printf("Digite o expoente: ");
+    scanf("%d", &expoente);
+
+    for (int i = 1; i <= expoente; i++) {
+        resultado = resultado * base;
+    }
+
+    printf("Resultado: %d elevado a %d = %d\n",
+           base, expoente, resultado);
+
+    return 0;
+}
+
+// 6) Faca um programa que colete o peso de 7 pessoas. Ao final, informe quantos pesos estao 
+//    acima de 80kg e quantos estao abaixo ou igual. 
+#include <stdio.h>
+int main() {
+    float peso;
+    int acima = 0, abaixoIgual = 0;
+
+    for (int i = 1; i <= 7; i++) {
+        printf("Digite o peso da %d pessoa: ", i);
+        scanf("%f", &peso);
+
+        if (peso > 80) {
+            acima++;
+        } else {
+            abaixoIgual++;
+        }
+    }
+
+    printf("\nPesos acima de 80 kg: %d\n", acima);
+    printf("Pesos abaixo ou iguais a 80 kg: %d\n", abaixoIgual);
+
+    return 0;
+}
+
+// 7) Faca um programa que leia um numero inteiro positivo e determine se ele e ou nao
+//    um numero primo. 
+#include <stdio.h>
+int main() {
+    int numero, divisores = 0;
+
+    printf("Digite um numero inteiro positivo: ");
+    scanf("%d", &numero);
+
+    if (numero > 0) {
+        for (int i = 1; i <= numero; i++) {
+            if (numero % i == 0) {
+                divisores++;
+            }
+        }
+
+        if (divisores == 2) {
+            printf("%d e um numero primo.\n", numero);
+        } else {
+            printf("%d nao e um numero primo.\n", numero);
+        }
+    } else {
+        printf("Numero invalido! Digite um numero positivo.\n");
+    }
+
+    return 0;
+}
+
+
+// 8) Elaborar um programa que faca uma contagem regressiva de 10 ate 1 e, no final exiba a 
+//    mensagem fim do tempo.
+#include <stdio.h>
+int main() {
+
+    for (int i = 10; i >= 1; i--) {
+        printf("%d\n", i);
+    }
+
+    printf("Fim do tempo!\n");
+
+    return 0;
+}
+
+------------------------------------------------------
+======== execicio 01 ==============
+#include <stdio.h>
+main(){
+	int x = 0;
+	while (x <= 30){
+		if( (x%2) != 0){
+			printf("\nValor impar: %d", x);			
+		}
+		x++;
+	}
+}
+
+
+======== execicio 02 ==============
+#include <stdio.h>
+float media,n1,n2;
+main(){
+	printf("Digite a nota da primeira avaliação(0 a 10):\n");
+	scanf("%f", &n1);
+	while( (n1<0) || (n1>10) )   {
+		printf("Digite um valor valido de 0 a 10:\n");
+		scanf("%f", &n1);
+	}
+	
+	printf("Digite a nota da segunda avaliação(0 a 10):\n");
+	scanf("%f", &n2);
+	while( (n2<0) || (n2>10) )   {
+		printf("Digite um valor valido de 0 a 10:\n");
+		scanf("%f", &n2);
+	}
+	media = (n1+n2) / 2;
+	printf("\nMedia: %.2f", media);	
+}
+
+======== execicio 03 ==============
+#include <stdio.h>
+
+int main() {
+    int opcao;
+
+    do {
+        // Exibição do menu
+        printf("\n--- MENU DE OPÇÕES ---\n");
+        printf("1 - SAUDAÇÃO\n");
+        printf("2 - BRONCA\n");
+        printf("3 - FELICITAÇÃO\n");
+        printf("0 - FIM\n");
+        printf("Escolha uma opção: ");
+        scanf("%d", &opcao);
+
+        // Verificação da opção escolhida
+        switch(opcao) {
+            case 1:
+                printf("Olá. Como vai ?\n");
+                break;
+            case 2:
+                printf("Vamos estudar mais.\n");
+                break;
+            case 3:
+                printf("Meus Parabéns !\n");
+                break;
+            case 0:
+                printf("Fim de serviço.\n");
+                break;
+            default:
+                printf("Opção inválida! Tente novamente.\n");
+        }
+    } while(opcao != 0);
+
+    return 0;
+}
+
+
+
+======== execicio 04 ==============
+
+#include <stdio.h>
+
+int main() {
+    int numero;
+    int maior;
+
+    printf("Digite um número (0 para sair): ");
+    scanf("%d", &numero);
+
+    // Se o primeiro número já for 0, o programa não digitou valores válidos
+    if (numero == 0) {
+        printf("Nenhum número válido foi digitado.\n");
+        return 0;
+    }
+
+    // Inicializa o maior com o primeiro número lido
+    maior = numero;
+
+    while (numero != 0) {
+        if (numero > maior) {
+            maior = numero; // Atualiza o maior valor encontrado
+        }
+        printf("Digite um número (0 para sair): ");
+        scanf("%d", &numero);
+    }
+
+    printf("O maior número digitado foi: %d\n", maior);
+
+    return 0;
+}
+
+
+======== execicio 05 ==============
+
+#include <stdio.h>
+
+int main() {
+    int estoque_notas = 1000;
+    int valor_saque = 0;
+    int notas_necessarias;
+
+    while (valor_saque >= 0) {
+        printf("\nEstoque atual de notas: %d\n", estoque_notas);
+        printf("Digite o valor do saque (valor negativo para encerrar): ");
+        scanf("%d", &valor_saque);
+
+        // Condição de parada: valor negativo
+        if (valor_saque < 0) {
+            printf("Programa encerrado pelo usuário.\n");
+            break;
+        }
+
+        // Validação 1: Múltiplo de 10
+        if (valor_saque % 10 != 0) {
+            printf("Erro: O valor deve ser múltiplo de 10.\n");
+        } 
+        // Validação 2: Quantidade de notas em estoque
+        else {
+            notas_necessarias = valor_saque / 10;
+
+            if (notas_necessarias > estoque_notas) {
+                printf("Erro: Não há notas suficientes no repositório para este saque.\n");
+            } else {
+                // Saque bem-sucedido: atualiza o estoque
+                estoque_notas -= notas_necessarias;
+                printf("Saque realizado com sucesso! Fornecidas %d notas de R$ 10.\n", notas_necessarias);
+            }
+        }
+    }
+
+    return 0;
+}
+
+
+======== execicio 06 ==============
+
+#include <stdio.h>
+
+int main() {
+    int voto = -1;
+    int cand1 = 0, cand2 = 0, cand3 = 0;
+    int brancos = 0, nulos = 0, total_votos = 0;
+    float perc_brancos = 0.0, perc_nulos = 0.0;
+
+    while (voto != 0) {
+        printf("Digite o seu voto (1, 2, 3 = Candidatos | 4 = Branco | 5 = Nulo | 0 = Encerrar): ");
+        scanf("%d", &voto);
+
+        switch(voto) {
+            case 1: cand1++; total_votos++; break;
+            case 2: cand2++; total_votos++; break;
+            case 3: cand3++; total_votos++; break;
+            case 4: brancos++; total_votos++; break;
+            case 5: nulos++; total_votos++; break;
+            default: printf("Código inválido! Voto não computado.\n");
+        }
+    }
+
+    // Exibição dos resultados apenas se houver votos computados
+    printf("\n======= RESULTADO DA APURAÇÃO =======\n");
+    printf("Candidato 1: %d votos\n", cand1);
+    printf("Candidato 2: %d votos\n", cand2);
+    printf("Candidato 3: %d votos\n", cand3);
+    printf("Votos em Branco: %d\n", brancos);
+    printf("Votos Nulos: %d\n", nulos);
+    printf("Total Geral de Votos: %d\n", total_votos);
+
+    if (total_votos > 0) {
+        // Cálculo dos percentuais
+        perc_brancos = ((float)brancos / total_votos) * 100;
+        perc_nulos = ((float)nulos / total_votos) * 100;
+        
+        printf("Percentual de Brancos: %.2f%%\n", perc_brancos);
+        printf("Percentual de Nulos: %.2f%%\n", perc_nulos);
+    } else {
+        printf("Nenhum voto foi registrado nesta eleição.\n");
+    }
+
+    return 0;
+}
+
+
+
+
